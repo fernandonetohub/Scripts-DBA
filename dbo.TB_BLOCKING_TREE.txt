@@ -1,0 +1,15 @@
+USE [DBADB]
+GO
+
+/****** Object:  Table [dbo].[TB_BLOCKING_TREE]    Script Date: 05/11/2021 15:22:40 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TB_BLOCKING_TREE](
+	[DT] [datetime] NOT NULL,
+	[BLOCKING_TREE] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
