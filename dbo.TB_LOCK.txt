@@ -1,0 +1,31 @@
+USE [DBADB]
+GO
+
+/****** Object:  Table [dbo].[TB_LOCK]    Script Date: 05/11/2021 15:25:23 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TB_LOCK](
+	[DBName] [nvarchar](128) NULL,
+	[Session_ID] [smallint] NOT NULL,
+	[blocking_session_id] [smallint] NULL,
+	[Start_Time] [datetime] NOT NULL,
+	[Status] [nvarchar](30) NOT NULL,
+	[Wait_Type] [nvarchar](60) NULL,
+	[Last_Wait_Type] [nvarchar](60) NOT NULL,
+	[Open_Transaction_Count] [int] NOT NULL,
+	[Total_Elapsed_time] [int] NOT NULL,
+	[Reads] [bigint] NOT NULL,
+	[Writes] [bigint] NOT NULL,
+	[Logical_reads] [bigint] NOT NULL,
+	[Command] [nvarchar](32) NOT NULL,
+	[TextLocked] [nvarchar](max) NULL,
+	[TextLoking] [nvarchar](max) NULL,
+	[wait_time] [int] NOT NULL,
+	[DTInclusao] [datetime2](7) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
